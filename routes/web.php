@@ -18,11 +18,11 @@ use App\Http\Middleware\Mensajes;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware(RedirigirVista::class);
+})->middleware(RedirigirVista::class,Mensajes::class);
 
-Route::get('/log', function () {
-    return view('welcome');
-})->middleware(Mensajes::class);
+//Route::get('/log', function () {
+  //  return view('welcome');
+//})->middleware(Mensajes::class);
 
 
 
